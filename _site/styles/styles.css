@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600,700&subset=latin-ext');
+@import url('https://rsms.me/inter/inter-ui.css');
+
+:root {
+	--yellow: #F1C33A;
+	--black-text: #1B1B1B;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {font-size: 1.125em;}
+
+body {
+	margin: 0;
+	font-family: 'Inter UI', sans-serif;
+	
+  line-height: 1.45;
+  color: var(--black-text);
+}
+
+
+/*FONT STYLE*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 700;
+}
+
+
+/*from type-scale.com*/
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.998em;
+}
+
+h2 {font-size: 2.827em;}
+
+h3 {font-size: 1.999em;}
+
+h4 {font-size: 1.414em;}
+
+small, .font_small {font-size: 0.707em;}
+
+/*smaller headings for mobile*/
+@media only screen and (max-width: 600px) {
+	html {font-size: 1em;}
+
+	p {margin-bottom: 1.3em;}
+
+	h1, h2, h3, h4 {
+		margin: 1.414em 0 0.5em;
+		line-height: 1.2;
+	}
+
+	h1 {
+		margin-top: 0;
+		font-size: 3.157em;
+	}
+
+	h2 {font-size: 2.369em;}
+
+	h3 {font-size: 1.777em;}
+
+	h4 {font-size: 1.333em;}
+
+	small, .font_small {font-size: 0.75em;}
+}
+
+
+/*SPLIT IMAGE LANDING*/
+
+.split-image {
+	height: 100vh;
+}
+
+.split-image-text {
+	width: 50vw;
+	height: inherit;
+	float: left;
+	
+	background-color: var(--yellow);
+	
+	padding: 5vw;
+}
+
+.split-image-image {
+	width: 50vw;
+	height: inherit;
+	float: left;
+	object-fit: cover;
+}
+
