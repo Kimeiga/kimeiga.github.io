@@ -137,22 +137,22 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .overlay {
-    height: 0%;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
-    overflow-y: hidden;
-    transition: 0.5s;
+	height: 0%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.9);
+	overflow-y: hidden;
+	transition: 0.5s;
 	
 	font-family: 'Work Sans', sans-serif;
 }
 
 
-
+/*row navigation for portrait*/
 @media all and (max-width: 600px) {
 	.overlay {
 		display: grid;
@@ -163,6 +163,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+/*column navigation for landscape*/
 @media not all and (max-width: 600px) {
 	.overlay {
 		display: grid;
@@ -178,10 +179,10 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .nav-item-1, .nav-item-2, .nav-item-3, .nav-item-4, .nav-item-5 {
-    padding: 8px;
-    text-decoration: none;
-    color: #818181;
-    display: block;
+	padding: 8px;
+	text-decoration: none;
+	color: #818181;
+	display: block;
 	
 	display: flex;
 	align-items:  center;
@@ -215,7 +216,6 @@ h1, h2, h3, h4, h5, h6 {
 .overlay .closebtn {
   position: absolute;
 	top: 3vh;
-/*	left: 8.8vw;*/
 	width: 20vw;
 	
 	/*Make button like link*/
@@ -229,13 +229,4 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 2em;
 }
 
-@media screen and (max-height: 450px) {
-  .overlay {overflow-y: auto;}
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}
 
