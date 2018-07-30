@@ -211,8 +211,8 @@ h1, h2, h3, h4, h5, h6 {
 .overlay .closebtn {
   position: absolute;
 	top: 3vh;
-	left: 8.8vw;
-	
+/*	left: 8.8vw;*/
+	width: 20vw;
 	
 	/*Make button like link*/
 	background: none !important;
