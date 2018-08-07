@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Inter UI", sans-serif; }
   .split-image-text form > * {
     border: none;
-    padding: 1em; }
+    padding: 0.5em; }
   .split-image-text form > #name {
     grid-area: name; }
   .split-image-text form > #email {
@@ -224,13 +224,13 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.3em;
   color: white;
   border-radius: 0;
-  padding: 20px 80px 20px;
+  padding: 1.5em 4.5em 1.5em;
   transition: all 0.3s ease-out;
   background: linear-gradient(270deg, #00e0d5, rgba(0, 224, 213, 0.8), rgba(34, 34, 34, 0), rgba(34, 34, 34, 0));
   background-position: 1% 50%;
   background-size: 300% 300%;
   text-decoration: none;
-  margin: 0.625em;
+  margin: 1em;
   border: 1px solid white; }
   .btn:hover, .btn:focus, .btn:active {
     color: #fff;
