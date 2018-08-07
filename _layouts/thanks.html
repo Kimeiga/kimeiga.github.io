@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+	
+	{% include nav.html %}
+	
+	<div class="fullscreen-text">
+		{{ content }}
+
+		<a class="btn" href="{{ "/" | relative_url }}">Return home!</a>
+	</div>
+	
+	
+</body>
+
+</html>

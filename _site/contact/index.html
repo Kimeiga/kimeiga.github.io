@@ -59,11 +59,13 @@
 				<h2>Want to work with me?</h2>
 				<p>Or share intel? Or just chat :) ?</p>
 
-				<form action="/action_page.php">
-					<input type="text" id="fname" name="firstname" placeholder="First Name">
-					<input type="text" id="lname" name="lastname" placeholder="Surname">
+				<form action="https://formspree.io/kimeiga@outlook.com" method="POST">
+					<input type="text" name="name" id="name" placeholder="Name">
+					<input type="email" name="_replyto" id="email" placeholder="Email">
 					<textarea id="message" name="message" placeholder="Your beautiful prose"></textarea>
 					<input type="submit" value="Send to Hakan">
+					<input type="hidden" name="_next" value="/thanks" />
+          <input type="hidden" name="_subject" value="New response in portfolio site!" />
 				</form>
 				
 		</div>

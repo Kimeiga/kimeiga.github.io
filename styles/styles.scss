@@ -15,13 +15,13 @@ $black:  #1B1B1B;
 $font-title: 'Work Sans', sans-serif;
 $font-body:  'Inter UI', sans-serif;
 
-$spacing-xs:        .5em;
-$spacing-s:         $spacing-xs * 2;
-$spacing-sm:        $spacing-s + $spacing-xs;
-$spacing-m:         $spacing-sm + $spacing-xs;
-$spacing-ml:        $spacing-m + $spacing-xs;
-$spacing-l:         $spacing-ml + $spacing-s;
-$spacing-xl:        $spacing-l + $spacing-s;
+$spacing-1:        .5em;
+$spacing-2:        $spacing-1 * 2;
+$spacing-3:        $spacing-2 + $spacing-1;
+$spacing-4:        $spacing-3 + $spacing-1;
+$spacing-5:        $spacing-4 + $spacing-1;
+$spacing-6:        $spacing-5 + $spacing-2;
+$spacing-7:        $spacing-6 + $spacing-2;
 
 /*necessary css styles*/
 
@@ -119,38 +119,29 @@ h1, h2, h3, h4, h5, h6 {
 
 	form {
 		display:grid;
-		grid-template-areas: "fname lname"
-							 "message message"
-							 "submit submit";
-
+		grid-template-areas: "name email"
+												 "message message"
+												 "submit submit";
 		grid-template-rows: 1fr 5fr 1fr;
-
 		height: 20em;
-
 		font-family: $font-body;
 	}
 
 	form > * {
-
-		padding: $spacing-s;
+		border: none;
+		padding: $spacing-1;
 	}
 
-	form > #fname {
-		grid-area: fname;
-		border: none;
+	form > #name {
+		grid-area: name;
 	}
 
-	form > #lname {
-		grid-area: lname;
-		border: none;
-		// border: 1px solid $yellow;
-		// background-color: #818181;
+	form > #email {
+		grid-area: email;
 	}
 
 	form > #message {
 		grid-area: message;
-		border: none;
-		// border: 1px solid $yellow;
 		background-color: #000;
 		color: white;
 		resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
@@ -159,55 +150,13 @@ h1, h2, h3, h4, h5, h6 {
 	form > input[type=submit] {
 		background-color: $cyan;
 		grid-area: submit;
-		border: none;
 		cursor: pointer;
 	}
 
-	/* contact form */
-	/* Style inputs with type="text", select elements and textareas */
-	// input[type=text], select {
-	// 	width: 50%; /* Full width */
-	// 	padding: 12px; /* Some padding */  
-	// 	border: 0px solid #ccc; /* Gray border */
-	// 	border-radius: 4px; /* Rounded borders */
-	// 	box-sizing: border-box; /* Make sure that padding and width stays in place */
-	// 	margin-top: 6px; /* Add a top margin */
-	// 	margin-bottom: 16px; /* Bottom margin */
-	// 	resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-	// }
-
-	textarea {
-		// width: 100%; /* Full width */
-		// padding: 12px; /* Some padding */  
-		// border: 1px solid #ccc; /* Gray border */
-		// border-radius: 4px; /* Rounded borders */
-		// box-sizing: border-box; /* Make sure that padding and width stays in place */
-		// margin-top: 6px; /* Add a top margin */
-		// margin-bottom: 16px; /* Bottom margin */
-		// resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+	form > input[type=submit]:hover {
+		background-color: lighten($cyan, 20);
 	}
 
-	/* Style the submit button with a specific background color etc */
-	input[type=submit] {
-		// background-color: #4CAF50;
-		// color: white;
-		// padding: 12px 20px;
-		// border: none;
-		// border-radius: 0px;
-		// cursor: pointer;
-	}
-
-	// /* When moving the mouse over the submit button, add a darker green color */
-	// input[type=submit]:hover {
-	// 	background-color: #45a049;
-	// }
-
-	// /* Add a background color and some padding around the form */
-	// .container {
-	// 	border-radius: 5px;
-	// 	background-color: #f2f2f2;
-	// 	padding: 20px;
-	// }
 }
 
 .split-image-image {	
@@ -339,3 +288,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+.fullscreen-text {
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+  
+  text-align: center;
+
+  height: 100vh;
+  background-color: $yellow;
+  padding: $spacing-l;
+}
+
+.btn {
+/*   display: inline-block; */
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1em;
+  letter-spacing: 0.3em;
+  // color: rgba(223,190,106,0.7);
+  color: white;
+  border-radius: 0;
+  padding: $spacing-3 $spacing-7 $spacing-3;
+  transition: all 0.3s ease-out;
+  // background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+  background: linear-gradient(270deg, rgba(0, 224, 213, 1), rgba(0, 224, 213, 0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+  background-position: 1% 50%;
+  background-size: 300% 300%;
+  text-decoration: none;
+  margin: $spacing-2;
+  // border: none;
+  // border: 1px solid rgba(223,190,106,0.3);
+  border: 1px solid white;
+
+  &:hover, &:focus, &:active {
+    color: #fff;
+    // border: 1px solid rgba(223,190,106,0);
+    border: 1px solid rgba(255,255,255,0);
+    background-position: 99% 50%;
+  }
+}
