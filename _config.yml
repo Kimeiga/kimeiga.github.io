@@ -1,1 +1,32 @@
-name: Kimeiga
+# Dependencies
+markdown:         kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
+permalink:           pretty
+
+
+# Setup
+title:               Hakan Kimeiga Alpay
+tagline:             'Game, Graphic, Web Developer'
+description:         'Kimeiga is a game, graphic, web, and language developer. He loves Insurgency, night photography, and making friends laugh. Memnum oldum.'
+# url:                 http://lanyon.getpoole.com
+# baseurl:             ''
+
+
+
+# github
+github:
+  repo:           https://github.com/kimeiga/kimeiga.github.io
+
+# About/contact
+author:
+  name:              Hakan Kimeiga Alpay
+  url:               https://twitter.com/theHakanAlpay
+  email:             hak7alp@gmail.com
+
+# Custom vars
+version:             1.0.0
