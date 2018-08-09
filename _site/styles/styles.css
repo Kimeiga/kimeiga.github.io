@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .open-nav-button {
   position: fixed;
-  bottom: 3vh;
+  bottom: 3vw;
   left: 3vw;
   cursor: pointer;
   display: flex;
@@ -149,6 +149,9 @@ h1, h2, h3, h4, h5, h6 {
 .open-nav-button img {
   height: 2.5em; }
 
+@media all and (max-width: 600px) {
+  .open-nav-button img {
+    height: 2em; } }
 .overlay {
   height: 0%;
   width: 100%;
