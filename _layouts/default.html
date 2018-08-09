@@ -5,19 +5,8 @@
 {% include head.html %}
 
 <body>
-	<button class="open-nav" onclick="openNav()">
-		<img src="{{ "images/kimeiga-logo.svg" | relative_url }}" alt="Kimeiga Logo" class="kimeiga-logo" />
-		<span>KIMEIGA</span>
-	</button>
 	
-	<nav id="myNav" class="overlay">
-		<button tabindex="0"  class="closebtn" onclick="closeNav()">&times;</button>
-		<div class="nav-item-1"><a href="/">HOME</a></div>
-		<div class="nav-item-2"><a href="https://kimeiga.github.io/blog" target="_blank">BLOG</a></div>
-		<div class="nav-item-3"><a href="/projects">PROJECTS</a></div>
-		<div class="nav-item-4"><a href="/resume">RÉSUMÉ</a></div>
-		<div class="nav-item-5"><a href="/contact">CONTACT</a></div>
-	</nav>
+  {% include nav.html %}
 	
 	<section class="split-image">
 		<div class="split-image-text">
@@ -28,17 +17,6 @@
 		</div>
 		<img class="split-image-image" src="/images/hakan-hero.jpg">
 	</section>
-	
-	<script>
-		function openNav() {
-			document.getElementById("myNav").style.height = "100%";
-		}
-
-		function closeNav() {
-			document.getElementById("myNav").style.height = "0%";
-		}
-	</script>
-	
 	
 </body>
 

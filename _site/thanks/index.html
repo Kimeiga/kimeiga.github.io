@@ -53,6 +53,10 @@
     <div class="nav-item-5"><a href="/contact">CONTACT</a></div>
 </nav>
 
+<a class="open-nav-button" onclick="toggleNav()">
+  <img src="/images/kimeiga-yellow.svg" alt="Kimeiga Logo" class="kimeiga-logo" />
+</a>
+
 <script>
     function openNav() {
         document.getElementById("myNav").style.height = "100%";
@@ -60,6 +64,15 @@
 
     function closeNav() {
         document.getElementById("myNav").style.height = "0%";
+    }
+
+    function toggleNav() {
+      if( document.getElementById("myNav").style.height == "100%") {
+        document.getElementById("myNav").style.height = "0%";
+      }
+      else{
+        document.getElementById("myNav").style.height = "100%";
+      }
     }
 </script>
 	
