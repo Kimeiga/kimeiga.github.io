@@ -137,22 +137,17 @@ h1, h2, h3, h4, h5, h6 {
 .open-nav-button {
   position: fixed;
   bottom: 3vh;
-  left: 50%;
-  transform: translateX(-50%);
-  /*Make button like link*/
-  background: none !important;
-  border: none;
-  padding: 0 !important;
+  left: 3vw;
   cursor: pointer;
   display: flex;
   align-items: center;
-  border: 20px solid #1B1B1B;
+  border: 15px solid #f3f3f3;
   border-radius: 50%;
-  background-color: #1B1B1B !important;
+  background-color: #f3f3f3 !important;
   z-index: 9; }
 
 .open-nav-button img {
-  height: 3em; }
+  height: 2.5em; }
 
 .overlay {
   height: 0%;

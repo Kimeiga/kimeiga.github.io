@@ -39,18 +39,41 @@
 
 <body>
 	<button class="open-nav" onclick="openNav()">
-		<img src="/images/kimeiga-logo.svg" alt="Kimeiga Logo" class="kimeiga-logo" />
-		<span>KIMEIGA</span>
-	</button>
-	
-	<nav id="myNav" class="overlay">
-		<button tabindex="0"  class="closebtn" onclick="closeNav()">&times;</button>
-		<div class="nav-item-1"><a href="/">HOME</a></div>
-		<div class="nav-item-2"><a href="https://kimeiga.github.io/blog" target="_blank">BLOG</a></div>
-		<div class="nav-item-3"><a href="/projects">PROJECTS</a></div>
-		<div class="nav-item-4"><a href="/resume">RÉSUMÉ</a></div>
-		<div class="nav-item-5"><a href="/contact">CONTACT</a></div>
-	</nav>
+    <img src="/images/kimeiga-logo.svg" alt="Kimeiga Logo" class="kimeiga-logo" />
+    <span>KIMEIGA</span>
+</button>
+
+<nav id="myNav" class="overlay">
+    <button tabindex="0"  class="closebtn" onclick="closeNav()">&times;</button>
+    <div class="nav-item-1"><a href="/">HOME</a></div>
+    <div class="nav-item-2"><a href="https://kimeiga.github.io/blog" target="_blank">BLOG</a></div>
+    <div class="nav-item-3"><a href="/projects">PROJECTS</a></div>
+    <div class="nav-item-4"><a href="/resume">RÉSUMÉ</a></div>
+    <div class="nav-item-5"><a href="/contact">CONTACT</a></div>
+</nav>
+
+<a class="open-nav-button" onclick="toggleNav()">
+  <img src="/images/kimeiga-yellow.svg" alt="Kimeiga Logo" class="kimeiga-logo" />
+</a>
+
+<script>
+    function openNav() {
+        document.getElementById("myNav").style.height = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.height = "0%";
+    }
+
+    function toggleNav() {
+      if( document.getElementById("myNav").style.height == "100%") {
+        document.getElementById("myNav").style.height = "0%";
+      }
+      else{
+        document.getElementById("myNav").style.height = "100%";
+      }
+    }
+</script>
 	
 	<section class="split-image">
 		
@@ -70,16 +93,6 @@
 				
 		</div>
 	</section>
-	
-	<script>
-		function openNav() {
-			document.getElementById("myNav").style.height = "100%";
-		}
-
-		function closeNav() {
-			document.getElementById("myNav").style.height = "0%";
-		}
-	</script>
 	
 	
 </body>
