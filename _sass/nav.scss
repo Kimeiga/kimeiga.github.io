@@ -57,44 +57,51 @@
 
 .nav-item-1, .nav-item-5 {
 	background: $site-bg;
-	a {
+	h4 {
 		color: $site-text;
-		&:hover {
-			color: $primary;
-		}
+		
+	}
+	&:hover {
+		color: $primary;
 	}
 	
 }
 
 .nav-item-2, .nav-item-4 {
 	background: $primary;
-	a {
+	h4 {
 		color: $site-bg;
-		&:hover {
-			color: $site-text;
-		}
+		
+	}
+	&:hover {
+		color: $site-text;
 	}
 }
 
 .nav-item-3 {
 	background: $site-text;
-	a {
+	h4 {
 		color: $primary;
-		&:hover {
-			color: $site-bg;
-		}
+		
+	}
+	&:hover {
+		color: $site-bg;
 	}
 }
 
-.overlay a, .overlay a:visited {
-	text-decoration: none;
-	// color: #818181;
-}
+// .overlay a, .overlay a:visited {
+// 	text-decoration: none;
+// 	// color: #818181;
+// }
 
 
 .overlay a:hover, .overlay a:focus {
 	// color: #f1f1f1;
 	text-decoration: line-through;
+	h4{
+		font-style: normal;
+	}
+	
 	// font-weight: 700;
 }
 
