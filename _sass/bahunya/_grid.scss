@@ -1,0 +1,123 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+body {
+  font-family: $sans-serif;
+  background: $site-bg;
+  color: $site-text;
+}
+
+section {
+  margin-left: auto;
+  margin-right: auto;
+  width: bs(10);
+}
+
+
+main {
+  max-width: 70rem;
+  margin: 0 auto;
+  border-top: 0.5px solid $site-text-grey;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+
+  padding: bs(2);
+
+  text-align: center;
+
+  > * {
+    margin: bs(1);
+  }
+}
+
+footer nav a {
+  margin: 0 bs(0.25);
+  img {
+    vertical-align: middle;
+  }
+  
+}
+
+footer p,
+footer nav {
+  font-size: 90%;
+}
+
+article{
+  max-width: 100%;
+  padding: bs(1);
+}
+
+article {
+  width: bs(25);
+  margin: 0 auto;
+}
+
+ol,
+ul {
+  margin-top: 0;
+}
+
+li dl,
+li ol,
+li ul {
+  margin-bottom: 0;
+}
+
+dl {
+  display: inline-block;
+  margin: 0 0 bs(1) 0;
+}
+
+dt {
+  padding-top: bs(0.5);
+  padding-left: bs(0.5);
+}
+
+dd {
+  padding-bottom: bs(0.5);
+  margin-left: bs(1.5);
+
+  + dt {
+    border-top: 1px solid $primary;
+  }
+}
+
+blockquote {
+  border-left: 1px solid $primary;
+  padding: 0 bs(1);
+  margin: bs(1) 0 bs(1) bs(1);
+
+  footer {
+    background: none;
+    display: block;
+    color: $site-text-grey;
+    padding: bs(0.5) 0;
+    font-size: 90%;
+    text-align: start;
+  }
+
+}
+
+img {
+  height: auto;
+  margin: 0 auto;
+}
+
+figure {
+  margin: bs(1);
+  img {
+    display: block;
+  }
+}
+

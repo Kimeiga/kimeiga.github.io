@@ -1,0 +1,166 @@
+@import "./bahunya/defs";
+
+.overlay {
+	height: 0%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.9);
+	overflow-y: hidden;
+	transition: 0.5s;
+	
+	font-family: $serif;
+}
+
+
+/*row navigation for portrait*/
+@media all and (max-width: 600px) {
+	.overlay {
+		display: grid;
+		grid-template-rows: repeat(5, 1fr);
+		grid-template-columns: 1fr;
+		width: 100%;
+    text-align: center;
+	}
+}
+
+/*column navigation for landscape*/
+@media not all and (max-width: 600px) {
+	.overlay {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: 1fr;
+		width: 100%;
+    text-align: center;
+		
+		justify-items: stretch;
+	}
+}
+
+
+
+.nav-item-1, .nav-item-2, .nav-item-3, .nav-item-4, .nav-item-5 {
+	padding: 8px;
+	text-decoration: none;
+	color: #818181;
+	display: block;
+	
+	display: flex;
+	align-items:  center;
+	justify-content: center;
+}
+
+/*colors of the navigation stripes*/
+
+.nav-item-1, .nav-item-5 {
+	background: $site-bg;
+	a {
+		color: $site-text;
+		&:hover {
+			color: $primary;
+		}
+	}
+	
+}
+
+.nav-item-2, .nav-item-4 {
+	background: $primary;
+	a {
+		color: $site-bg;
+		&:hover {
+			color: $site-text;
+		}
+	}
+}
+
+.nav-item-3 {
+	background: $site-text;
+	a {
+		color: $primary;
+		&:hover {
+			color: $site-bg;
+		}
+	}
+}
+
+.overlay a, .overlay a:visited {
+	text-decoration: none;
+	// color: #818181;
+}
+
+
+.overlay a:hover, .overlay a:focus {
+	// color: #f1f1f1;
+	text-decoration: line-through;
+	// font-weight: 700;
+}
+
+.overlay .closebtn {
+  position: absolute;
+	top: 3vh;
+	right: 0;
+	width: 20vw;
+	margin: 0;
+	
+	/*Make button like link*/
+	background: none !important;
+	border: none;
+	padding: 0 !important;
+	cursor: pointer;
+	
+	color: white;
+	font-family: $serif;
+	font-size: 2em;
+
+	&:hover {
+		font-weight: 700;
+		text-decoration: line-through;
+		color: white;
+	}
+}
+
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+
+	
+	background: rgba(#000, .6);
+
+	padding: bs(0.5);	
+
+
+	display: flex;
+	align-items: center;
+		justify-content: space-between;
+
+	#site-title {
+		display: flex;
+		align-items: center;
+
+		font-weight: 900;
+		
+
+		img {
+			height: 2rem;
+			margin-right: 0.5rem;
+		}
+	}
+
+	#menu-button {
+		font-weight: 700;
+	}
+
+	a, p {
+		display: inline;
+		margin: 0;
+		font-family: $serif;
+		
+		// font-size: 110%;
+	}
+}

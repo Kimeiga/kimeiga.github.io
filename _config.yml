@@ -16,7 +16,8 @@ description:         'Kimeiga is a game, graphic, web, and language developer. H
 # url:                 http://lanyon.getpoole.com
 # baseurl:             ''
 
-
+sass:
+  style: compressed
 
 # github
 github:

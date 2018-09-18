@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i');
+
+* {
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+
+p {
+  font-family: "Muli"
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  font-size: calc(.5rem + 2vmin);
+}
+
+.landing {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://s33.postimg.cc/xcpco6gwf/20180330_150217.jpg");
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+
+  color: #e6bf00;
+  
+  .landing-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    
+    padding: 4vmin;
+    
+    display: flex;
+    justify-content: space-between;
+    
+    font-size: 0.8rem;
+    
+    p {
+      margin: 0;
+    }
+  }
+  
+  .hero-text {
+    position: absolute;
+    bottom: 20vmin;
+    width: 100vw;
+    padding: 4vmin;
+    background: rgba(0,0,0,0.8);
+    
+    h1 {
+      margin-top: 0.5rem;
+      margin-bottom: 0.3rem;
+      font-size: 3rem;
+      font-weight: 900;
+    }
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+
+  padding: 4vmin;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    color: #e6bf00;
+    text-decoration: none;
+  }
+
+  #site-title {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 2.5rem;
+      margin-right: 0.5rem;
+    }
+
+    h1 {
+      display: inline;
+      margin: 0 auto;
+      font-size: 1.5rem;
+    }
+  }
+}
