@@ -2,33 +2,71 @@
 
 <body>
 
-  <header>
+  <header class="header-home">
 
     {% include nav.html %}
 
     <div class="hero-text">
       <h1><i>Hakan Kimeiga Alpay</i></h1>
-      <h4>Hiya! I’m a game, graphic, and web developer and a Computer Science major at UCLA.</h4>
+      <p style="font-size: 110%;">Hiya! I’m a game, graphic, and web developer! I'm studying computer science at UCLA.</p>
     </div>
 
   </header>
 
   <main>
     <article>
+
       {{ content }}
+
+      <h2>Projects</h2>
+
+      <div class="project-grid">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+      </div>
+
+      <h2>Blog</h2>
+      <p>I write my blog posts on my separate blog site: <a href="/blog">Life of Kimeiga</a>. Here are some of the best!</p>
+      <h3><a href="https://kimeiga.github.io/blog/2018/09/15/bahunya/">I created a 10KB classless CSS framework</a></h3>
+      <p>2018-09-15</p>
+      <hr>
+      <h3><a href="https://kimeiga.github.io/blog/2018/09/11/broken-mechanics/">Broken Mechanics in the Game of Life</a></h3>
+      <p>2018-09-11</p>
+      <hr>
+      <h3><a href="https://kimeiga.github.io/blog/2018/09/03/perfectionism/">Rapid-Prototyping and Perfectionism</a></h3>
+      <p>2018-09-03</p>
+      <h2>Contact</h2>
+
+      <h3>Would you like to work with me?</h3>
+      <p>Or just chat about things? I will try to get back to you promptly!</p>
+
+      <form class="contact-form" action="https://formspree.io/kimeiga@outlook.com" method="POST">
+        <input type="text" name="name" id="name" placeholder="Name">
+        <input type="email" name="_replyto" id="email" placeholder="Email">
+        <textarea id="message" name="message" placeholder="Your beautiful prose"></textarea>
+        <input type="submit" id="submit" value="Send to Hakan">
+
+        <input type="hidden" name="_next" value="{{ "/thanks" | relative_url }}" />
+        <input type="hidden" name="_subject" value="New response in portfolio site!" />
+      </form>
+
+      <h2>About Me</h2>
+
+      <h3>I started programming games in early high school</h3>
+
+      <p>I remember when my brother came back from Japan to visit and gave me his copy of Unity 3.x: Game Development Essentials. I barely knew what a computer was.</p>
+      <p>But I really liked video games, and I loved to idea of making them. So I finished my studying early that night, and started the tutorial in the book. It was really thorough and within the week I had finished my first first person adventure game written in C#! Excited, I had my parents sat down and play it (no small feat).</p>
+      <p>Ever since then, I've been programming games, websites, applications, languages, etc. I also love videography, sketching, and trying my best on the ukulele. Life has treated me well, and I've been lucky enough to get good grades while also having fun making cool things!</p>
+      <p>I hope to continue that into the future; let's see where this goes.</p>
+
     </article>
+
+
   </main>
 
-  <footer>
-    <p>&copy; 2018 Hakan Alpay</p>
-    <nav>
-      <a href="https://github.com/kimeiga">Github</a>
-      <a href="https://twitter.com/theHakanAlpay">Twitter</a>
-      <a href="https://youtube.com/ShinyYellowSquare">YouTube</a>
-      <a href="mailto:kimeiga@outlook.com">Email</a>
-      <a href="https://linkedin.com/in/hakanalpay">LinkedIn</a>
-    </nav>
-  </footer>
+  {% include footer.html %}
 </body>
 
 </html>

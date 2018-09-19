@@ -1,13 +1,28 @@
 @import './bahunya/defs';
 
+.header-home {
+	background-image: url("../assets/img/hakan-suit-2.jpg");
+	background-position: 70% 50%;
+}
+
+.header-resume {
+	background-image: url("../assets/img/new-york-street.jpg");
+	background-position: center;
+}
+
+.header-contact {
+	background-image: url("../assets/img/hakan-roof.jpg");
+	background-position: center;
+}
+
 header {
 	width: 100%;
-  height: 100vh;
-  background-image: url("../assets/img/hakan-suit-2.jpg");
-  background-size: cover;
-	// background-position: center;
-	background-position: 70% 50%;
-	
+	height: 100vh;
+
+	background-size: cover;
+	background-position: center;
+
+
 	color: $primary;
 
 	position: relative;
@@ -16,22 +31,32 @@ header {
 		margin-top: 0;
 	}
 
-	
+
 
 	.hero-text {
 		background: rgba(#000, .6);
 
 		position: absolute;
-		bottom: bs(3);
+		bottom: bs(1);
 
-		padding: bs(1) bs(1) bs(1) bs(3);
+		padding: bs(0.5) bs(0.5) bs(0.5) bs(0.5);
 
 		width: 100%;
+
+		h1 {
+			margin: 0;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
 
 		h4 {
 			font-family: $sans-serif;
 			font-weight: 400;
 			font-style: normal;
+			color: $site-text;
+			margin: 0;
 		}
 	}
 
@@ -39,11 +64,125 @@ header {
 
 main {
 	width: 100%;
-}
-main {
 	max-width: initial;
+	overflow-x: hidden;
 }
 
 hr {
-	margin: bs(2) 0;
+	// margin: bs(2) 0;
+}
+
+h1,
+h2,
+h3 {
+	color: $primary;
+}
+
+h4,
+h5,
+h6 {
+	color: $secondary;
+}
+
+h2 {
+	background: $primary;
+	color: $site-bg;
+	padding: bs(0.5);
+	width: 100vw;
+	position: relative;
+	left: bs(-0.5);
+}
+
+.full-width {
+	position: relative;
+	width: 100vw;
+	transform: translate(-50%);
+	left: 50%;
+	max-width: initial;
+}
+
+.project-grid {
+	position: relative;
+	width: 90vw;
+	transform: translate(-50%);
+	left: 50%;
+	max-width: initial;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: 30rem;
+	grid-gap: 1rem;
+
+
+	.one {
+		background: red;
+		grid-column: auto / span 2;
+	}
+
+	.two {
+		background: blue;
+		grid-row: auto / span 2;
+	}
+
+	.three {
+		background: green;
+
+	}
+
+	.four {
+		background: aquamarine;
+		grid-column: auto / span 2;
+		grid-row: auto / span 2;
+	}
+
+	
+}
+
+.contact-form {
+	position: relative;
+	width: 90vw;
+	transform: translate(-50%);
+	left: 50%;
+	max-width: initial;
+
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: 7rem;
+	grid-gap: 1rem;
+
+	padding: 0;
+	border: 0;
+
+	* {
+		margin: 0;
+		width: 100%;
+	}
+
+	#name {
+		background: $site-bg;
+		color: $primary;
+		border-radius: 0;
+	}
+
+	#email {
+		background: $site-bg;
+		color: $secondary;
+		border-radius: 0;
+	}
+
+	#message {
+		background: $site-text;
+		color: $site-bg;
+		border-radius: 0;
+		
+		grid-row: span 2;
+		grid-column: span 2;
+		min-width: initial;
+	}
+
+	#submit {
+		border-radius: 0;
+		grid-column: span 2;
+		margin: 0;
+	}
 }

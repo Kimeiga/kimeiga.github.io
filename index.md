@@ -9,7 +9,7 @@ layout: home
 
 #### Zenith Insurance: App Developer Intern
 
-##### Summer 2018
+Summer 2018
 
 - Developed features for Zenith Connect, an **iOS** and **Android** app for injured workers to coordinate with their examiner.
 - Created My Documents tab with **Kotlin** (Android) and **Swift** (iOS) in which all of user's documents are streamed via **REST requests** and to be displayed as PDFs.
@@ -20,7 +20,7 @@ layout: home
 
 #### Node.js: Open Source Contributor
 
-##### December 2017
+December 2017
 
 - Used **C++** to percent-encode additional characters within **Node.js URL parser** with new lookup table.
 - This aligns URL parser with new **WHATWG** (HTML Maintaining Group) encoding standards.
@@ -29,7 +29,7 @@ layout: home
 
 #### Zenith Insurance: App Developer Intern
 
-##### Summer 2017
+Summer 2017
 
 - Created security overlay with **Java** and **Swift** that hides sensitive information when **app enters background**.
 - Wrote **functional documentation**, designed **icons**, and fixed bugs in Android and iOS apps.
@@ -52,7 +52,7 @@ layout: home
 
 #### UCLA: BS in Computer Science
 
-##### August 2018 — June 2021
+August 2018 — June 2021
 
 Coursework: **Data Structures, Algorithms, Linux, Object Oriented Programming, Optimization, Multi-threading**
 
@@ -62,7 +62,7 @@ Coursework: **Data Structures, Algorithms, Linux, Object Oriented Programming, O
 
 #### Mappening.io
 
-##### March 2018 — 2019; _[mappening.io](www.mappening.io)_
+March 2018 — 2019; _[mappening.io](www.mappening.io)_
 
 - **Angular 5 web app** that gathers all UCLA events into map.
 - Upgraded app to **Progressive Web Application** with **service worker** and **offline caching**.
@@ -71,29 +71,23 @@ Coursework: **Data Structures, Algorithms, Linux, Object Oriented Programming, O
 
 #### "Too Many Authors" React App
 
-##### April 2018; _[toomanyauthors.com](www.toomanyauthors.com)_
+April 2018; _[toomanyauthors.com](www.toomanyauthors.com)_
 
 - Developed **React** game in which players take turns telling a story through series of pictures.
 - Converted their sentences to pictures with **Google Natural Language Processing,** Unsplash API, and Qwant **search engine API.**
 
 #### Multiplayer Rocket-Jump FPS Game
 
-##### August 2017
+August 2017
 
 - Developed dynamic **server-client** movement synchronization and hit recognition with **C#** in **Unity.**
 
 #### UCLA Roommate Matcher 2018
 
-##### Summer 2018; _[kimeiga.github.io/ucla2021](https://kimeiga.github.io/ucla2021/)_
+Summer 2018; _[kimeiga.github.io/ucla2021](https://kimeiga.github.io/ucla2021/)_
 
 - Created **Google Form** for incoming UCLA freshmen to fill in their lifestyle preferences and stored data in Google Sheet.
 - Used **Numpy** and **Pandas Python modules** to calculate coefficients of compatibility between all pairs of people.
 - Developed **HTML** website that displays users most compatible roommates via **Google Charts API**.
 - Received **1251 responses** and helped **600 people** find roommates.
 
-
-## Projects
-
-### Bahunya
-
-### Roomie Matcher
