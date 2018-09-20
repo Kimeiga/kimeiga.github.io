@@ -4,39 +4,40 @@
 {% include head.html %}
 
 <body>
-		<header class="header-contact">
+	<header class="header-contact">
 
-				{% include nav.html %}
-		
-				<div class="hero-text">
-					<h1><i>Contact Me</i></h1>
-				</div>
-		
-			</header>
-	
+		{% include nav.html %}
+
+		<div class="hero-text">
+			<h1><i>Contact Me</i></h1>
+		</div>
+
+	</header>
+
 	<main>
 		<article>
-				<h3>Interested in working with me?</h3>
-				<p>I'm based in the Los Angeles area, but I've got a bit of wanderlust so I'm open to other locations!</p>
-				
-				<p>You can contact me through the following email form (sends to <a href="mailto:kimeiga@outlook.com">kimeiga@outlook.com</a>), or any of my social media accounts (provided that you're respectful 😀).</p>
-	
-				<form class="contact-form" action="https://formspree.io/kimeiga@outlook.com" method="POST">
-					<input type="text" name="name" id="name" placeholder="Name">
-					<input type="email" name="_replyto" id="email" placeholder="Email">
-					<textarea id="message" name="message" placeholder="Your beautiful prose"></textarea>
-					<input type="submit" id="submit" value="Send to Hakan">
-	
-					<input type="hidden" name="_next" value="{{ "/thanks" | relative_url }}" />
-					<input type="hidden" name="_subject" value="New response in portfolio site!" />
-				</form>
+			<h3>Interested in working with me?</h3>
+			<p>I'm based in the Los Angeles area, but I've got a bit of wanderlust so I'm open to other locations!</p>
 
-				<p>Also feel free to contact me just to chat or to ask for help! I'll try to make myself useful!</p>
+			<p>You can contact me through the following email form (sends to <a href="mailto:kimeiga@outlook.com">kimeiga@outlook.com</a>),
+				or any of my social media accounts (provided that you're respectful 😀).</p>
+
+			<form class="contact-form" action="https://formspree.io/kimeiga@outlook.com" method="POST">
+				<input type="text" name="name" id="name" placeholder="Name">
+				<input type="email" name="_replyto" id="email" placeholder="Email">
+				<textarea id="message" name="message" placeholder="Your beautiful prose"></textarea>
+				<input type="submit" id="submit" value="Send to Hakan">
+
+				<input type="hidden" name="_next" value="{{ "/thanks" | relative_url }}" />
+				<input type="hidden" name="_subject" value="New response in portfolio site!" />
+			</form>
+
+			<p>Also feel free to contact me just to chat or to ask for help! I'll try to make myself useful!</p>
 		</article>
 	</main>
 
 	{% include footer.html %}
-	
+
 </body>
 
 </html>

@@ -6,13 +6,18 @@
 }
 
 .header-resume {
-	background-image: url("../assets/img/new-york-street.jpg");
-	background-position: center;
+	background-image: url("../assets/img/new-york-street-2.jpg");
+
 }
 
 .header-contact {
 	background-image: url("../assets/img/hakan-roof.jpg");
-	background-position: center;
+
+}
+
+.header-projects {
+	background-image: url("../assets/img/smc.jpg");
+
 }
 
 header {
@@ -41,6 +46,10 @@ header {
 
 		padding: bs(0.5) bs(0.5) bs(0.5) bs(0.5);
 
+		@include for-tablet-up {
+			padding-left: bs(2);
+		}
+
 		width: 100%;
 
 		h1 {
@@ -66,10 +75,6 @@ main {
 	width: 100%;
 	max-width: initial;
 	overflow-x: hidden;
-}
-
-hr {
-	// margin: bs(2) 0;
 }
 
 h1,
@@ -109,31 +114,15 @@ h2 {
 	max-width: initial;
 
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-auto-rows: 30rem;
+
+	@include for-tablet-up{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	grid-auto-rows: 18rem;
 	grid-gap: 1rem;
 
 
-	.one {
-		background: red;
-		grid-column: auto / span 2;
-	}
-
-	.two {
-		background: blue;
-		grid-row: auto / span 2;
-	}
-
-	.three {
-		background: green;
-
-	}
-
-	.four {
-		background: aquamarine;
-		grid-column: auto / span 2;
-		grid-row: auto / span 2;
-	}
 
 	
 }
@@ -185,4 +174,141 @@ h2 {
 		grid-column: span 2;
 		margin: 0;
 	}
+}
+
+.project-grid {
+	margin: bs(1) 0;
+
+	.bahunya {
+		background-image: url("../assets/img/projects/bahunya.jpg");			
+		background-size: cover;
+		background-position: center;
+
+		position: relative;
+
+		div {
+			position: absolute;
+			bottom: 0;
+			background: rgba($site-bg,0.6);
+			color: $site-text;
+			width: 100%;
+
+			h3 {
+				margin: 0;
+			}
+			p {
+				margin-bottom: 0;
+			}
+
+			padding: bs(0.5);
+			text-align: center;
+		}
+	}
+
+	.supersope {
+		background-image: url("../assets/img/projects/supersope.jpg");			
+		background-size: cover;
+		background-position: center;
+
+		position: relative;
+
+		@include for-tablet-up{
+			grid-row: auto / span 2;
+		}
+		
+
+		div {
+			position: absolute;
+			bottom: 0;
+			background: rgba($site-bg,0.6);
+			color: $site-text;
+			width: 100%;
+
+			h3 {
+				margin: 0;
+			}
+			p {
+				margin-bottom: 0;
+			}
+
+			padding: bs(0.5);
+			text-align: center;
+		}
+	}
+
+	.life-of-kimeiga {
+		background-image: url("../assets/img/projects/life-of-kimeiga.jpg");			
+		background-size: cover;
+		background-position: center;
+
+		position: relative;
+
+		@include for-tablet-up{
+			grid-row: auto / span 2;
+		}
+		
+
+		div {
+			position: absolute;
+			bottom: 0;
+			background: rgba($site-bg,0.6);
+			color: $site-text;
+			width: 100%;
+
+			h3 {
+				margin: 0;
+			}
+			p {
+				margin-bottom: 0;
+			}
+
+			padding: bs(0.5);
+			text-align: center;
+		}
+	}
+
+	.roomie-matcher {
+		background-image: url("../assets/img/projects/roomie-matcher.jpg");			
+		background-size: cover;
+		background-position: center;
+
+		position: relative;
+
+
+		div {
+			position: absolute;
+			bottom: 0;
+			background: rgba($site-bg,0.6);
+			color: $site-text;
+			width: 100%;
+
+			h3 {
+				margin: 0;
+			}
+			p {
+				margin-bottom: 0;
+			}
+
+			padding: bs(0.5);
+			text-align: center;
+		}
+	}
+}
+
+.center-button {
+	
+	background: $primary;
+	color: $site-bg;
+	cursor: pointer;
+	padding: bs(1);
+	margin: bs(1) auto;
+	width: 20rem;
+	text-align: center;
+
+	background-color:#cc0000;
+ border:1px solid #660000;
+ border-radius:5px;
+ color:#fff;
+ margin-right:10px;
+ padding:10px 10px 10px 10px;
 }
