@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hakan Kimeiga Alpay</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e9c64a">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<header class="header-projects" style="background-image: url(/assets/img/projects/bahunya.jpg)">
+
+		
+<nav id="myNav" class="overlay">
+    <button tabindex="0" class="closebtn" onclick="closeNav()">&times;</button>
+    <a href="/" class="nav-item-1"><h4>HOME</h4></a>
+    <a href="https://kimeiga.github.io/blog" target="_blank" class="nav-item-2"><h4>BLOG</h4></a>
+    <a href="/projects" class="nav-item-3"><h4>PROJECTS</h4></a>
+    <a href="/resume" class="nav-item-4"><h4>RÉSUMÉ</h4></a>
+    <a href="/contact" class="nav-item-5"><h4>CONTACT</h4></a>
+</nav>
+
+<nav class="navbar">
+    <a id="site-title" href="/">
+      <img src="/assets/img/kimeiga-logo.svg" alt="kimeiga logo">
+      <p>KIMEIGA</p>
+    </a>
+
+    <a id="menu-button" onclick="toggleNav()">Menu</a>
+</nav>
+
+<script>
+    function openNav() {
+        document.getElementById("myNav").style.height = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.height = "0%";
+    }
+
+    function toggleNav() {
+      if( document.getElementById("myNav").style.height == "100%") {
+        document.getElementById("myNav").style.height = "0%";
+      }
+      else{
+        document.getElementById("myNav").style.height = "100%";
+      }
+    }
+</script>
+
+		<div class="hero-text">
+			<h1><i>Bahunya - 10KB classless CSS framework</i></h1>
+		</div>
+
+	</header>
+
+	<main>
+		<article>
+			<h1 id="i-created-a-10kb-classless-css-framework">I created a 10KB classless CSS framework</h1>
+<p>Bahunya has responsive typography, navbar, syntax highlighting, and much more.</p>
+
+<p><a href="https://kimeiga.github.io/bahunya/">https://kimeiga.github.io/bahunya/</a></p>
+
+<hr />
+
+<h2 id="why">Why</h2>
+<p>I created Bahunya because I wanted a CSS framework that I could use to scaffold an attractive web application really quickly, but didn’t like the file size or complexity of Bootstrap or Foundation.</p>
+
+<blockquote>
+  <p>I didn’t want to memorize CSS classes to apply to my HTML elements when I would already be using semantically correct HTML.</p>
+</blockquote>
+
+<p>Instead, it should just work.</p>
+<h3 id="tacit">Tacit</h3>
+<p>I started researching ultralight CSS frameworks and happened onto Tacit.</p>
+
+<p>Tacit is a classless CSS framework with a lot of features I like, but I wanted to have a little more. I wanted responsive typography with modular scale and vertical rhythm. I wanted a navbar with a hamburger menu or regular text links. I wanted code syntax highlighting for CSS and JavaScript. And I wanted it to just work as a minified file that you can drop into your &lt;head&gt; via rawgit, just like Tacit!</p>
+
+<p>Fast-forward two weeks, I’ve made my own framework, and managed to only add 4kb to Tacit’s 6kb, making Bahunya 10kb.</p>
+
+<h2 id="customization">Customization</h2>
+
+<p>Bahunya is also customizable! I wrote lots of sample CSS in the Customization tab that you can layer on top of the framework to change fonts, colors, etc. If you want to change more, just fork the repo and use the SCSS files in your own project, where you can modify them to your heart’s delight.</p>
+
+<h2 id="origin-story">Origin Story</h2>
+
+<p>Bahunya’s logo is a derivative of the Hong Kong flag!</p>
+
+<p>I really like the shapes of the flag of Hong Kong, and wanted to create a logo out of it. So I made a similar flower with 6 pedals rather than 5. The flower of Hong Kong’s flag is the illusive Hong Kong Orchid Tree, aka Bauhinia blakeana. In Turkish, we call the Bauhinia, Bahunya. I added Century Schoolbook “Bahunya” under the logo I made, and everything fit! A framework’s identity was born.</p>
+
+<p>If you would like to contribute to Bahunya, especially to refactor code, please feel free to fork the repo and submit a pull request. I’m going to be working on this framework for a while, but now that university is starting, I’ll be more busy. Ideally I’d like for this project to take a life in the community!</p>
+
+<hr />
+
+<p>So that’s the story of Bahunya. Cheers!</p>
+
+		</article>
+	</main>
+
+	<footer>
+	<p>&copy; 2018 Hakan Alpay</p>
+	<nav>
+		<a href="https://github.com/kimeiga" target="_blank">GitHub</a>
+		<a href="https://twitter.com/theHakanAlpay" target="_blank">Twitter</a>
+		<a href="https://youtube.com/ShinyYellowSquare" target="_blank">YouTube</a>
+		<a href="mailto:kimeiga@outlook.com" target="_blank">Email</a>
+		<a href="https://linkedin.com/in/hakanalpay" target="_blank">LinkedIn</a>
+	</nav>
+	<p>kimeiga.github.io / kimei.ga</p>
+	<a href="https://kimeiga.weebly.com/" target="_blank">My Old Website</a>
+</footer>
+
+</body>
+
+</html>

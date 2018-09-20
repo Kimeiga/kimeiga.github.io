@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+	<header class="header-projects" style="background-image: url(/assets/img/projects/{{ page.image }})">
+
+		{% include nav.html %}
+
+		<div class="hero-text">
+			<h1><i>{{ page.title }}</i></h1>
+		</div>
+
+	</header>
+
+	<main>
+		<article>
+			{{ content }}
+		</article>
+	</main>
+
+	{% include footer.html %}
+
+</body>
+
+</html>

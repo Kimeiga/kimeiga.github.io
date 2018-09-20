@@ -237,7 +237,7 @@ h2 {
 	}
 
 	.life-of-kimeiga {
-		background-image: url("../assets/img/projects/life-of-kimeiga.jpg");			
+		background-image: url("/assets/img/projects/life-of-kimeiga.jpg");			
 		background-size: cover;
 		background-position: center;
 
@@ -311,4 +311,8 @@ h2 {
  color:#fff;
  margin-right:10px;
  padding:10px 10px 10px 10px;
+}
+
+pre, code {
+	max-width: 100%;
 }

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hakan Kimeiga Alpay</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e9c64a">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<header class="header-projects" style="background-image: url(/assets/img/projects/supersope.jpg)">
+
+		
+<nav id="myNav" class="overlay">
+    <button tabindex="0" class="closebtn" onclick="closeNav()">&times;</button>
+    <a href="/" class="nav-item-1"><h4>HOME</h4></a>
+    <a href="https://kimeiga.github.io/blog" target="_blank" class="nav-item-2"><h4>BLOG</h4></a>
+    <a href="/projects" class="nav-item-3"><h4>PROJECTS</h4></a>
+    <a href="/resume" class="nav-item-4"><h4>RÉSUMÉ</h4></a>
+    <a href="/contact" class="nav-item-5"><h4>CONTACT</h4></a>
+</nav>
+
+<nav class="navbar">
+    <a id="site-title" href="/">
+      <img src="/assets/img/kimeiga-logo.svg" alt="kimeiga logo">
+      <p>KIMEIGA</p>
+    </a>
+
+    <a id="menu-button" onclick="toggleNav()">Menu</a>
+</nav>
+
+<script>
+    function openNav() {
+        document.getElementById("myNav").style.height = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.height = "0%";
+    }
+
+    function toggleNav() {
+      if( document.getElementById("myNav").style.height == "100%") {
+        document.getElementById("myNav").style.height = "0%";
+      }
+      else{
+        document.getElementById("myNav").style.height = "100%";
+      }
+    }
+</script>
+
+		<div class="hero-text">
+			<h1><i>Süperşöpe - a Stylish Preact music player</i></h1>
+		</div>
+
+	</header>
+
+	<main>
+		<article>
+			<p><a href="https://supersope.now.sh">Check out the music player</a>, and <a href="https://github.com/kimeiga/supersope">the code</a>!</p>
+
+<h1 id="one-night-i-was-bored">One night I was bored</h1>
+
+<p>I had been learning the differences between lots of JavaScript frameworks at the time. React, Angular, and Vue I knew, but I was learning about Hyperapp, Svelte, Surplus, AppRun, Dojo, Keechma, etc. There’s a lot of them out there. I remembered my appreciation for <a href="https://preactjs.com/">Preact, a 3kb version of React by Jason Miller</a>, and decided that it was high time that I make another thing with it.</p>
+
+<h2 id="i-want-to-make-something-now">I want to make <em>something</em> now</h2>
+
+<p>So I thought about how I have <strong>amazing</strong> music taste that I would like to share with my friends, and I was also itching to try an unusual layout for a website, so I pulled out my web design notebook and sketched something out. I came up with a two-panel design, in which one panel was a song list, and the other would be the song currently playing.</p>
+
+<h3 id="an-idea">An idea</h3>
+
+<p>I listen to a lot of (good) music on Soundcloud. Especially funk. And I was interested in using the Soundcloud API.</p>
+
+<h2 id="do-it-with-preact">Do it with Preact!</h2>
+
+<p>So first I used the amazing <a href="https://github.com/developit/preact-cli">Preact-cli</a> (Command Line Interface), to create a new Preact project (that was completely PWA enabled, thanks Jason!). I created a song-list screen, and used the Preact Router to create numerous Song pages. I then hooked them all into a CSS Grid layout that switched from side-by-side to top-and-bottom layout for mobile for responsiveness.</p>
+
+<h3 id="soundcloud-api">SoundCloud API?</h3>
+
+<p>Well SoundCloud does have a <a href="https://developers.soundcloud.com/docs/api/guide">publicly facing API</a>, but you need a API key in order to play songs with it. I clicked their link to get one, and it said that they weren’t accepting people for a while (perhaps indefinitely).</p>
+
+<h4 id="in-need-of-a-hack">In need of a hack</h4>
+
+<p>I’m not one to wait. I tried using the SoundCloud player that you get when you click “Embed”. It looks like this:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;iframe</span> <span class="na">width=</span><span class="s">"100%"</span> <span class="na">height=</span><span class="s">"166"</span> <span class="na">scrolling=</span><span class="s">"no"</span> <span class="na">frameborder=</span><span class="s">"no"</span> <span class="na">allow=</span><span class="s">"autoplay"</span> <span class="na">src=</span><span class="s">"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/125725588&amp;color=%23ff00c8&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+</code></pre></div></div>
+
+<p>I saw the <code class="highlighter-rouge">width</code> and <code class="highlighter-rouge">height</code> parameters in the iframe and played around with them. Apparently when you have the height set to about 20 pixels, the player converts into a minimal look with a play button and a waveform indicating progress though the song.</p>
+
+<h5 id="forgot-about-cors">Forgot about CORS</h5>
+
+<p>I thought maybe I could have the user press a button on the website and it would send a click to the play button of the iframe, and I would just hide the iframe, or just set the opacity to 0. However, when I tried this, it violated the Cross-Origin Policy (duh hakan), and I knew I couldn’t do that.</p>
+
+<h4 id="a-clever-solution">A clever solution!</h4>
+
+<p>So what I came up with I still think is kinda clever. I basically <em>ZOOMED IN</em> on the play button of the iframe, so it was nice and big, and placed it on a black circle background. I did that with the following CSS styles:</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">#frame</span> <span class="p">{</span>
+	<span class="nl">-ms-zoom</span><span class="p">:</span> <span class="m">4</span><span class="p">;</span>
+	<span class="nl">-moz-transform</span><span class="p">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">4</span><span class="p">);</span>
+	<span class="nl">-moz-transform-origin</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+	<span class="nl">-o-transform</span><span class="p">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">4</span><span class="p">);</span>
+	<span class="nl">-o-transform-origin</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+	<span class="nl">-webkit-transform</span><span class="p">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">4</span><span class="p">);</span>
+	<span class="nl">-webkit-transform-origin</span><span class="p">:</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
+
+	<span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span>
+	<span class="nl">left</span><span class="p">:</span> <span class="m">-30px</span><span class="p">;</span>
+	<span class="nl">top</span><span class="p">:</span> <span class="m">-30px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This solves two problems! The first problem is that it gets around the SoundCloud API and plays music. However, I could have (and initially tried) to use a Soundcloud player with <code class="highlighter-rouge">autoplay</code> turned on, and then just hide it. But mobile phone browsers don’t allow autoplay (to decrease data consumption).</p>
+
+<p>BUT, this is <strong>also</strong> solved by the play button because it renders correctly (and prominently) on mobile and the user can just tap it like a normal Soundcloud play button for the music to start.</p>
+
+<h2 id="perfect">Perfect</h2>
+
+<p>It was perfect, it played my funky music, <a href="https://unsplash.com/photos/M0tL38xahu0">it had a cool picture of NYC that I stylized from Unsplash</a>, and it was a PWA without me having to do anything.</p>
+
+<p>All in about 4-5 hours of work. Preact is fantastic.</p>
+
+<h3 id="süperşöpe">Süperşöpe?</h3>
+
+<p>Also if you’re wondering about the name:</p>
+
+<p>Süper means super in Turkish. Şöpe means… I don’t know. It’s a word I came up with to mean “dope” or “cool”. It sounds fun to say. Şöööpeeeeeeee! So the title means “supercool” I suppose.</p>
+
+<h3 id="check-it">Check it</h3>
+
+<p><a href="https://supersope.now.sh">Check out the music player</a>, and <a href="https://github.com/kimeiga/supersope">the code</a>!</p>
+
+<p>I will be adding more songs to it once I figure out how to avoid making new <code class="highlighter-rouge">index.js</code> files for each song I want to add, and just interpolate data in a database (maybe <a href="https://github.com/developit/unistore">unistore</a>) to create the routes automatically.</p>
+
+		</article>
+	</main>
+
+	<footer>
+	<p>&copy; 2018 Hakan Alpay</p>
+	<nav>
+		<a href="https://github.com/kimeiga" target="_blank">GitHub</a>
+		<a href="https://twitter.com/theHakanAlpay" target="_blank">Twitter</a>
+		<a href="https://youtube.com/ShinyYellowSquare" target="_blank">YouTube</a>
+		<a href="mailto:kimeiga@outlook.com" target="_blank">Email</a>
+		<a href="https://linkedin.com/in/hakanalpay" target="_blank">LinkedIn</a>
+	</nav>
+	<p>kimeiga.github.io / kimei.ga</p>
+	<a href="https://kimeiga.weebly.com/" target="_blank">My Old Website</a>
+</footer>
+
+</body>
+
+</html>
