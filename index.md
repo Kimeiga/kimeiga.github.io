@@ -91,3 +91,4 @@ Summer 2018; _[kimeiga.github.io/ucla2021](https://kimeiga.github.io/ucla2021/)_
 - Developed **HTML** website that displays users most compatible roommates via **Google Charts API**.
 - Received **1251 responses** and helped **600 people** find roommates.
 
+[View Resume as PDF](/assets/resume.pdf){:target="_blank"}

@@ -3,6 +3,8 @@ title: Resume
 layout: resume
 ---
 
+[View Resume as PDF](/assets/resume.pdf){:target="_blank"}
+
 ### Experience
 
 #### Zenith Insurance: App Developer Intern
