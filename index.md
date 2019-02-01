@@ -52,7 +52,7 @@ Summer 2017
 
 #### UCLA: BS in Computer Science
 
-August 2018 — June 2021
+August 2017 — June 2021
 
 Coursework: **Data Structures, Algorithms, Linux, Object Oriented Programming, Optimization, Multi-threading**
 
