@@ -1,3 +1,0 @@
-# kimeiga.github.io
-
-yeah
