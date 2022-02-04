@@ -1,2 +1,2 @@
 # hakiland
-![kimeiga-white.svg](logo)
+![logo](kimeiga-white.svg)
