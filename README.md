@@ -1,2 +1,1 @@
-# hakiland
-![logo](kimeiga-white.svg)
+# new-website
